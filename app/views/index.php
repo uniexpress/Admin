@@ -1,1 +1,1 @@
-prueba de archivo
+soy la vista principal (index) <br>

@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="app/assets/css/semantic.min.css">
     <link rel="stylesheet" href="app/assets/css/style.css">
     <title>Login</title>
-</head>
+    <link rel="icon" type="image/png" href="app/assets/images/favicon.png" /></head>
 <body>
     <main id="login">
-        <section id="marca">
+        <section id="uniexpress">
             <h1>UniExpress</h1>
             <p class="italic12">La mejor manera de mercar</p>
+        </section>
+        <section id="marca">
+            <img src="app/assets/images/marca.png" alt="">
         </section>
         <section id="info">
             <h2>Iniciar sesión</h2>

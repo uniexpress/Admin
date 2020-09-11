@@ -41,13 +41,12 @@ h2 {
     padding: 14px;
     text-align: center;
     width: 100%;
-    
 }
 
 /*Cambio colores de place holder*/
 ::-webkit-input-placeholder { color: var(--color-principal); opacity: .7;} 
-:-moz-placeholder { /* Firefox 18- */ color: var(--color-principal); opacity: .7; } 
-::-moz-placeholder { /* Firefox 19+ */ color: var(--color-principal); opacity: .7; } 
+:-moz-placeholder { color: var(--color-principal); opacity: .7; } /* Firefox 18- */ 
+::-moz-placeholder { color: var(--color-principal); opacity: .7; }  /* Firefox 19+ */
 :-ms-input-placeholder { color: var(--color-principal); opacity: .7; }
 
 .btn-degradado{
@@ -75,12 +74,27 @@ main#login{
     justify-content: center;
 }
 
-section#marca{
+section#uniexpress{
     text-align: center;
     margin: auto;
     width: 50%;
 }
 
+section#marca{
+    background-color: var(--color-gris);
+    border-radius: 100px;
+    height: 100px;
+    padding: 10px;
+    position: absolute;
+    top:45%;
+    width: 100px;
+}
+
+section#marca img{
+    width: 100%;
+}
+
+/* Contenedor formulario de login */
 section#info{
     background-color: var(--color-gris);
     width: 50%;
@@ -91,9 +105,9 @@ section#info{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
+/*  Formulario de login */
 form#form-login{
     width: 50%;
     height: 40%;

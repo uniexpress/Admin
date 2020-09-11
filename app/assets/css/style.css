@@ -20,6 +20,7 @@ body{
 
 h1{
     color: var(--color-secundario);
+    font-size: 50px;
     margin: 0;
 }
 
@@ -83,11 +84,11 @@ section#uniexpress{
 section#marca{
     background-color: var(--color-gris);
     border-radius: 100px;
-    height: 100px;
-    padding: 10px;
+    height: 70px;
+    padding: 8px;
     position: absolute;
     top:45%;
-    width: 100px;
+    width: 70px;
 }
 
 section#marca img{
@@ -120,5 +121,5 @@ form#form-login{
 
 select#select{
     color: var(--color-principalPH);
-    
+    text-align: center;
 }

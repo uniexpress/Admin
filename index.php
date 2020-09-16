@@ -6,28 +6,33 @@
     <link rel="stylesheet" href="app/assets/css/semantic.min.css">
     <link rel="stylesheet" href="app/assets/css/style.css">
     <title>Login</title>
-    <link rel="icon" type="image/png" href="app/assets/images/favicon.png" /></head>
+    <link rel="icon" type="image/png" href="app/assets/images/favicon.png"/>
+</head>
 <body>
     <main id="login">
         <section id="uniexpress">
             <h1>UniExpress</h1>
-            <p class="italic12">La mejor manera de mercar</ps>
+            <p class="italic12">La mejor manera de mercar</p>
         </section>
         <section id="marca">
             <img src="app/assets/images/marca.png" alt="">
         </section>
         <section id="info">
             <h2>Iniciar sesión</h2>
-            <form id="form-login" action="">
-                <select id="select" class="input-formulario" name=""  id="">
-                    <option value="">Selecciona</option>
-                    <option value="">Admin</option>
-                    <option value="">Agente</option>
-                </select>
-                <input type="text" class="input-formulario" name="" placeholder="Usuario" id="2">
-                <input type="password" class="input-formulario" placeholder="Contraseña" name="" id="">
-                <input type="button" class="btn-degradado" value="Ingresar">
-            </form>
+            <div class="ui form">
+            <div class="field">
+                <div class="ui left input">
+                    <input type="text" placeholder="Username">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui center input">
+                    <input type="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="ui blue fluid submit button">Login</div>
+                </div>
+            </div>
         </section>
     </main>
 </body>

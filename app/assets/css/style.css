@@ -7,6 +7,16 @@
     --color-gris: #f4f4f4;
   }
 
+  /*Cambio colores de place holder*/
+::-webkit-input-placeholder { color: var(--color-principal); opacity: .7;} 
+:-moz-placeholder { color: var(--color-principal); opacity: .7; } /* Firefox 18- */ 
+::-moz-placeholder { color: var(--color-principal); opacity: .7; }  /* Firefox 19+ */
+:-ms-input-placeholder { color: var(--color-principal); opacity: .7; }
+
+.btn_degradado{
+    background: var(--degradado);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -26,6 +36,7 @@ h1{
 
 h2 {
     color: var(--color-principal);
+    text-align: center;
 }
 
 /*Tamaño de fuente 12 en itálica, color blanco*/
@@ -34,34 +45,6 @@ h2 {
     font-size: 12;
     color: white;
 }
-
-.input-formulario{
-    color: var(--color-principal);
-    border:none;
-    border-radius: 8px;
-    padding: 14px;
-    text-align: center;
-    width: 100%;
-}
-
-/*Cambio colores de place holder*/
-::-webkit-input-placeholder { color: var(--color-principal); opacity: .7;} 
-:-moz-placeholder { color: var(--color-principal); opacity: .7; } /* Firefox 18- */ 
-::-moz-placeholder { color: var(--color-principal); opacity: .7; }  /* Firefox 19+ */
-:-ms-input-placeholder { color: var(--color-principal); opacity: .7; }
-
-.btn-degradado{
-    background: var(--degradado);
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 14px;
-    width: 100%;
-}
-
 
 main#login{
     background-color: var(--color-principal);
@@ -98,28 +81,11 @@ section#marca img{
 /* Contenedor formulario de login */
 section#info{
     background-color: var(--color-gris);
-    width: 50%;
-    margin: auto;
     height: 100vh;
+    padding: 150px;
+    width: 50%; 
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-/*  Formulario de login */
-form#form-login{
-    width: 50%;
-    height: 40%;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    
-}
-
-select#select{
-    color: var(--color-principalPH);
-    text-align: center;
 }

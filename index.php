@@ -11,7 +11,7 @@
     <main id="login">
         <section id="uniexpress">
             <h1>UniExpress</h1>
-            <p class="italic12">La mejor manera de mercar</p>
+            <p class="italic12">La mejor manera de mercar</ps>
         </section>
         <section id="marca">
             <img src="app/assets/images/marca.png" alt="">

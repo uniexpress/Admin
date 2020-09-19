@@ -20,17 +20,39 @@
         <section id="info">
             <h2>Iniciar sesión</h2>
             <div class="ui form">
-            <div class="field">
-                <div class="ui left input">
-                    <input type="text" placeholder="Usuario">
-                    </div>
-                </div>
+                
                 <div class="field">
-                    <div class="ui center input">
-                    <input type="password" placeholder="Contraseña">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="card[type]">
+                        <div class="default text">Select</div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item" data-value="visa">
+                                <i class="visa icon"></i>
+                                    Visa
+                            </div>
+                            <div class="item" data-value="amex">
+                                <i class="amex icon"></i>
+                                American Express
+                            </div>
+                            <div class="item" data-value="discover">
+                                <i class="discover icon"></i>
+                                Discover
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="ui blue fluid submit button">Login</div>
+
+                    <div class="ui left input">
+                        <input type="text" placeholder="Usuario">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui center input">
+                        <input type="password" placeholder="Contraseña">
+                        </div>
+                    </div>
+                    <div class="ui blue fluid submit button">Login</div>
+                    </div>
                 </div>
             </div>
         </section>

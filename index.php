@@ -22,7 +22,7 @@
             <div class="ui form">
                 
                 <div class="field">
-                    <div class="ui selection dropdown">
+                    <div class="ui selection dropdown field">
                         <input type="hidden" name="card[type]">
                         <div class="default text">Select</div>
                         <i class="dropdown icon"></i>

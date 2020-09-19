@@ -22,12 +22,12 @@
             <div class="ui form">
             <div class="field">
                 <div class="ui left input">
-                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Usuario">
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui center input">
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Contraseña">
                     </div>
                 </div>
                 <div class="ui blue fluid submit button">Login</div>

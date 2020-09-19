@@ -20,24 +20,19 @@
         <section id="info">
             <h2>Iniciar sesión</h2>
             <div class="ui form">
-                
                 <div class="field">
                     <div class="ui selection dropdown field">
                         <input type="hidden" name="card[type]">
-                        <div class="default text">Select</div>
+                        <div class="default text">Tipo de usuario</div>
                         <i class="dropdown icon"></i>
                         <div class="menu">
                             <div class="item" data-value="visa">
                                 <i class="visa icon"></i>
-                                    Visa
+                                    Admin
                             </div>
                             <div class="item" data-value="amex">
                                 <i class="amex icon"></i>
-                                American Express
-                            </div>
-                            <div class="item" data-value="discover">
-                                <i class="discover icon"></i>
-                                Discover
+                                    Agen
                             </div>
                         </div>
                     </div>

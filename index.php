@@ -19,7 +19,7 @@
         </section>
         <section id="info">
             <h2>Iniciar sesión</h2>
-            <div class="ui form">
+            <form id="frm_login" class="ui form">
                 <div class="field">
                     <div class="ui selection dropdown field">
                         <input type="hidden" name="card[type]">
@@ -37,20 +37,22 @@
                         </div>
                     </div>
 
-                    <div class="ui left input">
-                        <input type="text" placeholder="Usuario">
-                        </div>
+                    <div id="frm_login_div_user" class="ui input field">
+                        <input id="frm_login_user" type="text" placeholder="Usuario" required>
                     </div>
-                    <div class="field">
-                        <div class="ui center input">
-                        <input type="password" placeholder="Contraseña">
-                        </div>
+                    
+                    <div class="ui input fluid field">
+                        <input id="frm_login_pass" type="password" placeholder="Contraseña" required>
                     </div>
-                    <div class="ui blue fluid submit button">Login</div>
+                    
+                    <input id="btn_form_login" type='submit' class="ui blue fluid button" value='Ingresar' />
                     </div>
                 </div>
-            </div>
+            </form>
         </section>
     </main>
+    <script src="app/assets/js/jquery.min.js"></script>
+    <script src="app/assets/js/semantic.min.js"></script>
+    <script src="app/action/login.js"></script>
 </body>
 </html>

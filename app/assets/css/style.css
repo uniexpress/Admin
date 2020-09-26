@@ -79,7 +79,7 @@ section#marca img{
 }
 
 /* Contenedor formulario de login */
-section#info{
+section#frm{
     background-color: var(--color-gris);
     height: 100vh;
     padding: 150px;
@@ -88,4 +88,25 @@ section#info{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.frm_login_input_error{
+    color: var(--color-principal);
+    display: none;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.frm_login_input_error-incorrect{
+    display: block;
+}
+
+.frm_login_error{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.frm_login_error-active{
+    display: block;
 }

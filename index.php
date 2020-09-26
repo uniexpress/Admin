@@ -17,36 +17,46 @@
         <section id="marca">
             <img src="app/assets/images/marca.png" alt="">
         </section>
-        <section id="info">
+        <section id="frm">
             <h2>Iniciar sesión</h2>
             <form id="frm_login" class="ui form">
+                <!-- Grupo: Tipo de Usuario -->
                 <div class="field">
-                    <div class="ui selection dropdown field">
-                        <input type="hidden" name="card[type]">
-                        <div class="default text">Tipo de usuario</div>
+                    <div class="ui fluid selection dropdown">
                         <i class="dropdown icon"></i>
+                        <span class="default text">Tipo de usuario</span>
                         <div class="menu">
-                            <div class="item" data-value="visa">
-                                <i class="visa icon"></i>
-                                    Admin
-                            </div>
-                            <div class="item" data-value="amex">
-                                <i class="amex icon"></i>
-                                    Agen
-                            </div>
+                            <div class="item">Adming</div>
+                            <div class="item">Agen</div>
                         </div>
                     </div>
+                    <p class="frm_login_input_error">Debe elegir un tipo de usuario</p> 
+                </div>
 
-                    <div id="frm_login_div_user" class="ui input field">
-                        <input id="frm_login_user" type="text" placeholder="Usuario" required>
+                <!-- Grupo: User -->
+                <div id="frm_login_div_user" class="field">
+                    <div class="ui input fluid">
+                        <input id="frm_login_user" type="text" placeholder="Usuario" name="user">
                     </div>
-                    
-                    <div class="ui input fluid field">
-                        <input id="frm_login_pass" type="password" placeholder="Contraseña" required>
+                    <p class="frm_login_input_error">Este campo es requerido</p>
+                </div>
+
+                <!-- Grupo: Contraseña -->
+                <div id="frm_login_div_pass" class="field">
+                    <div class="ui input fluid">
+                        <input id="frm_login_pass" type="password" placeholder="Contraseña" name="pass">
                     </div>
-                    
+                    <p class="frm_login_input_error">Digíte su contraseña</p>
+                </div>
+
+                <!-- Mensaje de error -->
+                <div class="frm_login_error fluid center field" id="frm_login_error">
+                    <p>* Por favor complete el formulario correctamente</p>
+                </div>
+                
+                <!-- Grupo: Bóton Ingresar -->
+                <div id="frm_login_div_btn" class="">
                     <input id="btn_form_login" type='submit' class="ui blue fluid button" value='Ingresar' />
-                    </div>
                 </div>
             </form>
         </section>

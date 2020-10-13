@@ -20,18 +20,19 @@
         <section id="frm">
             <h2>Iniciar sesión</h2>
             <form id="frm_login" class="ui form">
+                
                 <!-- Grupo: Tipo de Usuario -->
-                <div class="field">
-                    <div class="ui fluid selection dropdown">
-                        <i class="dropdown icon"></i>
-                        <span class="default text">Tipo de usuario</span>
-                        <div class="menu">
-                            <div class="item">Adming</div>
-                            <div class="item">Agen</div>
-                        </div>
+                <div id="frm_login_div_typeuser" class="field">
+                    <div class="ui input fluid">
+                        <select id="frm_login_div_typeUserSelect" class="ui dropdown" name="typeUser">
+                            <option selected autofocus disabled>Tipo de usuario</option>
+                            <option value="0">Agen</option>
+                            <option value="1">Admin</option>
+                        </select>
                     </div>
                     <p class="frm_login_input_error">Debe elegir un tipo de usuario</p> 
                 </div>
+
 
                 <!-- Grupo: User -->
                 <div id="frm_login_div_user" class="field">

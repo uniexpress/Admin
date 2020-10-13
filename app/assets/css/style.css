@@ -29,9 +29,10 @@ body{
 }
 
 h1{
-    color: var(--color-secundario);
+    color: var(--color-principal);
     font-size: 50px;
     margin: 0;
+    text-align: center;
 }
 
 h2 {
@@ -90,15 +91,25 @@ section#frm{
     justify-content: center;
 }
 
+section#frm input{
+    color: var(--color-principal);
+}
+
+section#frm #frm_login_div_typeuser *{
+    color: var(--color-principal);
+    font-size: 12px;
+}
+
+section#frm #btn_form_login{
+    color: white;
+}
+
+/* Mensajes de error */
 .frm_login_input_error{
     color: var(--color-principal);
     display: none;
     font-size: 12px;
     margin-bottom: 0;
-}
-
-.frm_login_input_error-incorrect{
-    display: block;
 }
 
 .frm_login_error{
@@ -107,6 +118,72 @@ section#frm{
     display: none;
 }
 
+/* Estilos validación formulario login */
+.frm_login_input_error-incorrect{
+    display: block;
+}
+
 .frm_login_error-active{
+    display: block;
+}
+
+
+/* AddProduct */
+
+#addProduct{
+    background-color: var(--color-gris);
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+#addProduct form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#addProduct #frm_product_image{
+    border: 0;
+    color: var(--color-principal);
+    font-weight: bold;
+    font-size: 15px;
+    width: 1000px;
+}
+
+#addProduct  input{
+    border: 0;
+    color: var(--color-principal);
+    font-weight: bold;
+    font-size: 15px;
+    width: 500px;
+}
+
+#addProduct label{
+    color: var(--color-principalPH);
+}
+
+/* Mensajes de error producto */
+.frm_product_input_error{
+    color: var(--color-principal);
+    display: none;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.frm_product_error{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+/* Estilos validación formulario product */
+.frm_product_input_error-incorrect{
+    display: block;
+}
+
+.frm_product_error-active{
     display: block;
 }

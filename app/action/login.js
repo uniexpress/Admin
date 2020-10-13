@@ -1,17 +1,20 @@
-const expresiones = {
-	user: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	pass: /^.{4,12}$/, // 4 a 12 digitos.
-}
-
 const frm_login_inputs = document.querySelectorAll('#frm_login input');
-const campos = {
+const inputs = {
   user: false,
   pass: false,
+  typeUser: false,
 }
 
-
 $(document).ready(function(){
-    frm_login();
+
+    var session = localStorage.getItem('session');
+    if(session){
+      location.href="public/";
+    } else {
+      localStorage.clear();
+      frm_login();
+    }
+
   });
 
   function login(user,pass){
@@ -20,49 +23,52 @@ $(document).ready(function(){
     fetch(url)
    .then(response=>response.json())
    .then(data=>{
-     console.log(data.data[0]);
+     localStorage.setItem('session', true);
+     localStorage.setItem('user', JSON.stringify(data.data[0]));
+     location.href="public/";
    })
   }
 
   function frm_login(){
     $( "#frm_login").submit(function(e) {
       e.preventDefault();
-      if(campos.user && campos.pass){
+      if(inputs.user && inputs.pass){
         var user =$('#frm_login_user').val();
-        var pass =$('#frm_login_pass').val();
+        var pass =$('#frm_login_pass').val(); 
+        var typeUser =$('#frm_login_div_typeUserSelect').val(); 
         login(user,pass);
       } else{
         document.getElementById('frm_login_error').classList.add('frm_login_error-active')
       }
-
-
     }); 
   }
 
-  const validarFormulario = (e) => {
+  const validationForm = (e) => {
     switch (e.target.name){
       case "1":
       break;
       case "user":
-        validarCampo(e.target, e.target.name);
+        validationInput(e.target, e.target.name);
       break;
       case "pass":
-        validarCampo(e.target, e.target.name);
+        validationInput(e.target, e.target.name);
+      case "typeUser":
+        validationInput(e.target, e.target.name);
       break;
     }
   }
 
-  const validarCampo = (input, campo) => {
+  const validationInput = (input, opc) => {
     if(input.value == ''){
-      document.querySelector(`#frm_login_div_${campo} .frm_login_input_error`).classList.add('frm_login_input_error-incorrect');
-      campos[campo] = false;
+      document.querySelector(`#frm_login_div_${opc} .frm_login_input_error`).classList.add('frm_login_input_error-incorrect');
+      inputs[opc] = false;
     }else{
-      document.querySelector(`#frm_login_div_${campo} .frm_login_input_error`).classList.remove('frm_login_input_error-incorrect');
-      campos[campo] = true;
+      document.querySelector(`#frm_login_div_${opc} .frm_login_input_error`).classList.remove('frm_login_input_error-incorrect');
+      inputs[opc] = true;
       document.getElementById('frm_login_error').classList.remove('frm_login_error-active')
     }
   }
 
   frm_login_inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
+    input.addEventListener('keyup', validationForm);
   });
